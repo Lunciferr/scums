@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add new member</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="addMemberForm">
+    <ion-item>
+      <ion-label>Name :</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Age :</ion-label>
+      <ion-input type="number" formControlName="age"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Relationship</ion-label>
+      <ion-select formControlName="relationship">
+        <ion-select-option *ngFor="let option of categories"
+        [value]="option">
+        {{option}}
+        </ion-select-option>
+      </ion-select>
+      </ion-item>
+    <ion-item>
+      <ion-label>Income :</ion-label>
+      <ion-input type="number" formControlName="income"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Savings :</ion-label>
+        <ion-input type="number" formControlName="savings"></ion-input>
+    </ion-item>
+    <ion-button expand="block" color="secondary" (click)=add()>Add</ion-button>
+  </form>
+
+  
+</ion-content>
+

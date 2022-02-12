@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="profilepage">
+
+  <div>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let item of profile" text-wrap>
+      <ion-label>
+        Membership ID: {{item.id}}<br><br>
+        Name: {{item.name}}<br><br>
+        Age: {{item.age}}<br><br>
+        Income: {{item.income}}<br><br>
+        Savings: {{item.saving}}<br><br>
+        Relationship: {{item.relationship}}<br><br>
+        Sex: {{item.sex}}<br><br>
+        Cor: {{item.cor}}<br><br>
+        Date of Birth: {{item.dob}}<br><br>
+        Nationality: {{item.nationality}}<br><br>
+        Points: {{item.point}}<br><br>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button tab="member" id="memberbutton" [routerLink]="['/member']">
+    <ion-icon name="eye"></ion-icon>
+
+    <ion-label>&nbsp;View Member Page</ion-label>
+  </ion-button>
+
+</ion-content>
