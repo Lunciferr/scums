@@ -62,6 +62,7 @@ db.getConnection((err1) => {
     });
 });
 /*
+test
 app.route('/testMessage', cors(corsOptions)).post(function (request, resp) {
     console.log("Using the console feature");
     resp.json({ message: 'testMessage has been executed.' });
